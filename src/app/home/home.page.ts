@@ -17,7 +17,6 @@ export class HomePage implements OnInit{
   listaUsuarios: User[] = []
   
   constructor(private userService: UserService, private router: Router) {
-    this.buscarUsuarios();
   }
 
   ngOnInit(): void {}
@@ -37,7 +36,6 @@ export class HomePage implements OnInit{
   }
 
   excluirUsuario(id: number){
-
   }
 
 }

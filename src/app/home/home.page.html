@@ -9,27 +9,27 @@
 <ion-content [fullscreen]="true">
 
   <ion-item *ngFor="let user of listaUsuarios">
-    
-    <ion-item>
-      <ion-avatar slot="start">
-        <img alt="avatar" src="{{user.avatar}}" />
-      </ion-avatar>
-      <h1>{{user.email}} </h1>
-      <p>{{user.first_name}}</p>
-      <p>{{user.last_name}}</p>
-    </ion-item>
 
-    <ion-button color="warning"  (click)="alterarUsuario(user.id!)">
+    <ion-avatar slot="start">
+      <img alt="avatar" src="{{user.avatar}}" />
+    </ion-avatar>
+    <h1>{{user.email}} </h1>
+    <p>{{user.first_name}}</p>
+    <p>{{user.last_name}}</p>
+
+
+
+    <ion-button color="warning" (click)="alterarUsuario(user.id!)">
       <ion-icon slot="icon-only" name="create-outline"></ion-icon>
     </ion-button>
 
-    <ion-button color="danger" (click)="excluirUsuario(user.id!)" >
+    <ion-button color="danger" (click)="excluirUsuario(user.id!)">
       <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
     </ion-button>
-  
+
   </ion-item>
 
-  <ion-button routerLink="/criar-usuario"> 
+  <ion-button routerLink="/criar-usuario">
     Adicionar Usuario
   </ion-button>
 
