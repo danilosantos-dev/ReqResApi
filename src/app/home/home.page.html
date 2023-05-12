@@ -13,12 +13,19 @@
     <ion-avatar slot="start">
       <img alt="avatar" src="{{user.avatar}}" />
     </ion-avatar>
-    <h1>{{user.email}} </h1>
-    <p>{{user.first_name}}</p>
-    <p>{{user.last_name}}</p>
 
-
-
+    <ion-grid>
+      
+    <ion-row>
+      <p>{{user.last_name}}, {{user.first_name}}</p>
+    </ion-row>
+    
+      <ion-row>
+        <p>{{user.email}} </p>
+      </ion-row>
+    </ion-grid>
+        
+      
     <ion-button color="warning" (click)="alterarUsuario(user.id!)">
       <ion-icon slot="icon-only" name="create-outline"></ion-icon>
     </ion-button>
